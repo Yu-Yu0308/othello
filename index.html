@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="jp">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        
+        <title>Othello</title>
+    </head>
+    <body>
+        
+        <header id="header" class="wrapper">
+            <h1>オセロゲーム</h1>
+        </header>
+
+        <main>
+            <div class="wrapper">
+                <div class="center-container">
+                    <div id="start">
+                        <div id="start-contents">
+                            <p>色を選択してください<br>※黒が先行です</p>
+                            <form class="option">
+                                <label for=""><input name="color" type="radio" data-color="0" checked>黒</label>
+                                <label for=""><input name="color" type="radio" data-color="1">白</label>
+                            </form>
+                            <button id="start-button">start</button>
+                        </div>
+                    </div>
+
+                    <div id="end">
+                        <div id="end-contents">
+                            <p>終了です！</p>
+                            <button id="restart-button"><a href="javascript:window.location.reload();">Restart</a></button>
+                        </div>
+                    </div>
+
+                    <div id="mask"></div>
+
+                    <table id="board"></table>
+
+                    <div id="information">
+                        <div id="change">
+                            置く場所がないので交代
+                        </div>
+                        <div id="turn">
+                            黒のターンです
+                        </div>
+                        <div id="score-board">
+                            <div id="player" class="score-info">
+                                <div id="player-info"  data-color="2">
+                                    <h2>あなた</h2>
+                                    <div id="player-score" class="score">2</div>
+                                </div>
+                                <div id="player-result" class="result">結果</div>
+                            </div>
+    
+                            <div id="cp" class="score-info">
+                                <div id="cp-info"  data-color="2">
+                                    <h2>CP</h2>
+                                    <div id="cp-score" class="score">2</div>
+                                </div>
+                                <div id="cp-result" class="result">結果</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="index.js"></script>
+    </body>
+</html>
